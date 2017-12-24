@@ -1,4 +1,4 @@
-<form class="form-horizontal" method="POST" action="{{ route('login') }}">
+<form class="form-horizontal" method="GET" action="{{ route('logined') }}">
     {{ csrf_field() }}
 
     @if($type === 'email')

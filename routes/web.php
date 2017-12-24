@@ -13,6 +13,7 @@ Route::get('auth/email-authenticate/{token}', [
 ]);
 
 Route::view('/login_select','auth.login_select')->name('login_select');
+Route::get('/logined','Auth\LoginController@logined')->name('logined');
 
 Auth::routes();
 
