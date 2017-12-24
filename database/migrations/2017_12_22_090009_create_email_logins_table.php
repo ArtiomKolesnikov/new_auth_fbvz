@@ -13,9 +13,10 @@ class CreateEmailLoginsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('email_logins');
         Schema::create('email_logins', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token')->index();
+            $table->string('email');
+            $table->string('token');
             $table->timestamps();
         });
     }

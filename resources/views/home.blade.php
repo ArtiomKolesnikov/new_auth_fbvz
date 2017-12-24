@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    @auth
+                        Здарова!!!
+                    @else
+                                <p>На Вашу почту отправленно письмо со ссылкой.</p>
+                                <p>Перейдите по ней для входа</p>
+                    @endauth
                 </div>
             </div>
         </div>
